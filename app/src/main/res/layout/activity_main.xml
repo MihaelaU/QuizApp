@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorAccent"
+    android:background="@color/background"
     tools:context="com.example.android.quizapp.MainActivity">
 
 
@@ -48,24 +48,24 @@
         </LinearLayout>
 
         <RadioGroup
+            android:id="@+id/radioGroup"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center_horizontal"
             android:layout_margin="8dp"
-           >
+            android:visibility="visible">
 
             <RadioButton
-                android:id="@+id/radioButton6"
+                android:id="@+id/option_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
                 android:text="50"
-                android:textSize="18sp"
                 android:textColor="@color/answer"
-                android:onClick=""/>
+                android:textSize="18sp" />
 
             <RadioButton
-                android:id="@+id/radioButton5"
+                android:id="@+id/option_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
@@ -73,7 +73,7 @@
                 android:textSize="18sp"/>
 
             <RadioButton
-                android:id="@+id/radioButton4"
+                android:id="@+id/option_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
@@ -92,6 +92,7 @@
             android:layout_weight="6"
             android:background="@drawable/button_bg"
             android:text="Next"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:onClick="changescreen"/>
     </LinearLayout>
 </ScrollView>

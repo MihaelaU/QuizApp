@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Fun with flags by Sheldon Cooper</string>
+    <string name="no_option_choosen_question1">Please select one option!</string>
+    <string name="checked_radio_button">Please press next</string>
+    <string name="right_answer">Great!</string>
+
 </resources>
