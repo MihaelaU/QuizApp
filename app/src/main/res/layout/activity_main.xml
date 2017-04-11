@@ -34,6 +34,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/usa" />
+
         </LinearLayout>
 
         <RadioGroup
@@ -47,23 +48,38 @@
                 android:id="@+id/radioButton6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="5"
                 android:text="52"
-                />
+                android:textSize="18sp"
+                android:textColor="@color/question"
+                android:onClick=""/>
 
             <RadioButton
                 android:id="@+id/radioButton5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="54" />
+                android:layout_weight="5"
+                android:text="54"
+                android:textSize="18sp"/>
 
             <RadioButton
                 android:id="@+id/radioButton4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="56" />
+                android:layout_weight="5"
+                android:text="56"
+                android:textSize="18sp"/>
         </RadioGroup>
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_weight="6"
+            android:layout_gravity="center"
+            android:background="@drawable/button_bg"
+            android:text="Next" />
     </LinearLayout>
 </ScrollView>
