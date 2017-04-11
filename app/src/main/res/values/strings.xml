@@ -5,4 +5,5 @@
     <string name="right_answer">Great!</string>
     <string name="no_input">Please enter a country name!</string>
     <string name="try_again">Try again or move to the next screen!</string>
+    <string name="thank_you">Thank you! See you again soon!</string>
 </resources>

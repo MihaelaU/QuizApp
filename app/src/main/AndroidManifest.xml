@@ -19,7 +19,7 @@
         <activity android:name=".ActivityQuestion2" />
         <activity android:name=".ActivityQuestion3" />
         <activity android:name=".ActivityQuestion4" />
-        <activity android:name=".final_screen"></activity>
+        <activity android:name=".FinalScreen"></activity>
     </application>
 
 </manifest>
