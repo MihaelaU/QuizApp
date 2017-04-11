@@ -1,9 +1,63 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.android.quizapp.ActivityQuestion3">
+    android:background="@color/background"
+    tools:context="com.example.android.quizapp.ActivityQuestion2">
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/Textview1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:text="Question 3"
+            android:textSize="24sp"
+            android:textColor="@color/title"
+            android:textAlignment="center"
+            android:textAllCaps="true" />
+        <ImageView
+            android:id="@+id/mozambique"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/mozambique_flag" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="18dp"
+            android:textSize="18sp"
+            android:textColor="@color/answer"
+            android:textAlignment="center"
+            android:text="Name the only country whose flag includes a gun." />
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="type in the country name here..."
+            android:textColor="@color/answer"
+            android:textAlignment="center"
+            android:inputType="textMultiLine"/>
+        <Button
+            android:id="@+id/next3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_weight="6"
+            android:background="@drawable/button_bg"
+            android:text="Next"
+            android:textSize="18sp"
+            android:onClick="gotonext"/>
+    </LinearLayout>
+</ScrollView>

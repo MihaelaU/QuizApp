@@ -3,5 +3,6 @@
     <string name="no_option_choosen_question1">Please select one option!</string>
     <string name="checked_radio_button">Please press next</string>
     <string name="right_answer">Great!</string>
-
+    <string name="no_input">Please enter a country name!</string>
+    <string name="try_again">Try again or move to the next screen!</string>
 </resources>
