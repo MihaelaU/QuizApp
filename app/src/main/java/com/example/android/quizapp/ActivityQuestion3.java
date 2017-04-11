@@ -12,13 +12,13 @@ import static android.icu.lang.UCharacter.toUpperCase;
 
 public class ActivityQuestion3 extends AppCompatActivity {
     private EditText user_input;
-    private int results;
+    private int result;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question3);
         Intent mIntent = getIntent();
-        results = mIntent.getIntExtra("countresult", 0);
+        result = mIntent.getIntExtra("countresult", 0);
 
     }
     public void gotonext(View view) {
@@ -32,14 +32,13 @@ public class ActivityQuestion3 extends AppCompatActivity {
                 user_input = toUpperCase(user_input);
                 if (user_input.equals("MOZAMBIQUE"))
             {
+                    result++;
                     Toast.makeText(getApplicationContext(), getString(R.string.right_answer), Toast.LENGTH_SHORT).show();
-                    results++;
-            }
-            Toast.makeText(getApplicationContext(), getString(R.string.checked_radio_button), Toast.LENGTH_SHORT).show();
-        }
 
+            }
+        }
         Intent myIntent = new Intent(ActivityQuestion3.this, ActivityQuestion4.class);
-        myIntent.putExtra("results", results);
+        myIntent.putExtra("results", result);
         startActivity(myIntent);
     }
 

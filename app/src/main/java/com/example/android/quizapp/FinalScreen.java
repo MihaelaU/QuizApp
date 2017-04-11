@@ -1,33 +1,44 @@
 package com.example.android.quizapp;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.RadioButton;
-import android.widget.TextView;
+import android.widget.EditText;
+
 
 public class FinalScreen extends AppCompatActivity {
-    private int countresult;
+    private int counterresult;
     private String finalMessage;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_final_screen);
         Intent mIntent = getIntent();
-        countresult = mIntent.getIntExtra("countresult", 0);
-
-
+        counterresult = mIntent.getIntExtra("final", 0);
     }
 
-   // Button score = (Button) findViewById(R.id.score);
-    TextView text=(TextView) findViewById(R.id.Textview2);
-    private void createSummary()
+    public void showresult(View view)
     {
-        finalMessage += "Final results is " + countresult ;
-        finalMessage += "\n" + getString(R.string.thank_you);
-        text.setText(finalMessage);
+        EditText name = (EditText) findViewById(R.id.name);
+        String sendto = name.getText().toString();
+        String Message = createPointsSummary(counterresult);
+
+        Intent intent = new Intent(Intent.ACTION_SENDTO);
+        intent.setData(Uri.parse("mailto:"));
+        intent.putExtra(Intent.EXTRA_SUBJECT, "Dear User" + sendto);
+        intent.putExtra(Intent.EXTRA_TEXT, Message );
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
+    }
+    private String createPointsSummary(int counterresult){
+        String priceMessage = getString(R.string.right_answer);
+        priceMessage += "\nFinal points " + counterresult;
+        priceMessage += "\n" + getString(R.string.thank_you);
+        return priceMessage;
+
     }
 }
 
