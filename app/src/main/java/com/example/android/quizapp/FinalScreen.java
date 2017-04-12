@@ -27,7 +27,7 @@ public class FinalScreen extends AppCompatActivity {
 
         Intent intent = new Intent(Intent.ACTION_SENDTO);
         intent.setData(Uri.parse("mailto:"));
-        intent.putExtra(Intent.EXTRA_SUBJECT, "Dear User" + sendto);
+        intent.putExtra(Intent.EXTRA_SUBJECT, "Dear User " + sendto);
         intent.putExtra(Intent.EXTRA_TEXT, Message );
         if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
