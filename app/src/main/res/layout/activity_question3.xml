@@ -21,12 +21,14 @@
             android:textColor="@color/title"
             android:textAlignment="center"
             android:textAllCaps="true" />
+
         <ImageView
             android:id="@+id/mozambique"
             android:layout_width="300dp"
             android:layout_height="200dp"
             android:layout_gravity="center"
             app:srcCompat="@drawable/mozambique_flag" />
+
         <TextView
             android:id="@+id/textView2"
             android:layout_width="match_parent"
@@ -46,6 +48,7 @@
             android:textColor="@color/answer"
             android:textAlignment="center"
             android:inputType="textMultiLine"/>
+
         <Button
             android:id="@+id/next3"
             android:layout_width="wrap_content"
@@ -59,5 +62,7 @@
             android:text="Next"
             android:textSize="18sp"
             android:onClick="gotonext"/>
+
     </LinearLayout>
+
 </ScrollView>
