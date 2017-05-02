@@ -9,19 +9,24 @@
     <string name="option_1">50</string>
     <string name="option_2">52</string>
     <string name="option_3">56</string>
-
     <string name="checkbox_1">Romania</string>
     <string name="checkbox_2">Chad</string>
     <string name="checkbox_3">Mali</string>
     <string name="checkbox_4">Hungary</string>
-
     <string name="next">Next</string>
     <string name="question_1">Question 1</string>
     <string name="question_2">Question 2</string>
+    <string name="question_3">Question 3</string>
+    <string name="question_4">Question 4</string>
     <string name="question_1_text">What is the number of stars on USA flag?</string>
     <string name="question_2_text">Two countries share the following flag - one European, and one African nation. Choose! :)</string>
+    <string name="question_3_text">Name the only country whose flag includes a gun.</string>
+    <string name="question_4_text">On which country\'s flag would you find this symbol?</string>
     <string name="final_score">Final score</string>
     <string name="send_to_email">Send to email</string>
-    <string name="type_your_name">Type your name</string>
-
+    <string name="type_your_name_hint">Type your name</string>
+    <string name="type_country_hint">Type in the country name here...</string>
+    <string name="Radio_button1">Argentina</string>
+    <string name="Radio_button2">Kazakhstan</string>
+    <string name="Radio_button3">Spain</string>
 </resources>

@@ -6,11 +6,11 @@
     android:layout_height="match_parent"
     android:background="@color/background"
     tools:context="com.example.android.quizapp.FinalScreen">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-
 
         <TextView
         android:id="@+id/Textview1"
@@ -28,8 +28,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textMultiLine"
-            android:hint="@string/type_your_name" />
+            android:inputType="textEmailSubject"
+            android:hint="@string/type_your_name_hint" />
 
         <Button
             android:id="@+id/buttonfinal"
@@ -46,5 +46,7 @@
             android:clickable="true"
             android:onClick="showresult"
             android:padding="8dp"/>
+
     </LinearLayout>
+
 </ScrollView>
