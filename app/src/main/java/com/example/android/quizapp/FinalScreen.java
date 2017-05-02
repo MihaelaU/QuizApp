@@ -34,10 +34,10 @@ public class FinalScreen extends AppCompatActivity {
         }
     }
     private String createPointsSummary(int counterresult){
-        String priceMessage = getString(R.string.right_answer);
-        priceMessage += "\nFinal points " + counterresult;
-        priceMessage += "\n" + getString(R.string.thank_you);
-        return priceMessage;
+        String Message = getString(R.string.right_answer);
+        Message += "\nFinal points " + counterresult;
+        Message += "\n" + getString(R.string.thank_you);
+        return Message;
 
     }
 }

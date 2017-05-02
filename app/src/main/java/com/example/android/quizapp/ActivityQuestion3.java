@@ -30,7 +30,7 @@ public class ActivityQuestion3 extends AppCompatActivity {
 
             } else {
                 user_input = toUpperCase(user_input);
-                if (user_input.equals("MOZAMBIQUE"))
+                if (user_input.equalsIgnoreCase("MOZAMBIQUE"))
             {
                     result++;
                     Toast.makeText(getApplicationContext(), getString(R.string.right_answer), Toast.LENGTH_SHORT).show();
