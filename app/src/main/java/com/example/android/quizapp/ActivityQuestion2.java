@@ -30,13 +30,23 @@ public class ActivityQuestion2 extends AppCompatActivity {
     }
     public void nextscreen(View view) {
 
-        if (CheckBox1.isChecked() || CheckBox2.isChecked() || CheckBox3.isChecked() || CheckBox4.isChecked()) {
-            if (CheckBox1.isChecked() && CheckBox2.isChecked() ) {
-                intValue++;
-                Toast.makeText(getApplicationContext(), getString(R.string.right_answer), Toast.LENGTH_SHORT).show();
-            }
+        if ((CheckBox1.isChecked() && CheckBox2.isChecked()) && !CheckBox3.isChecked() && !CheckBox4.isChecked())
+        {
+            intValue++;
         }
-        Toast.makeText(getApplicationContext(), getString(R.string.checked_radio_button), Toast.LENGTH_SHORT).show();
+
+        if (intValue == 0)
+        {
+            Toast.makeText(getApplicationContext(), intValue + " points until now!!", Toast.LENGTH_SHORT).show();
+        }
+            else if (intValue == 1) {
+                    Toast.makeText(getApplicationContext(), intValue + " point until now!!", Toast.LENGTH_SHORT).show();
+        }
+                else if (intValue > 1)
+        {
+                    Toast.makeText(getApplicationContext(), intValue + " points until now!!", Toast.LENGTH_SHORT).show();
+        }
+
         Intent myIntent = new Intent(ActivityQuestion2.this, ActivityQuestion3.class);
         myIntent.putExtra("countresult", intValue);
         startActivity(myIntent);

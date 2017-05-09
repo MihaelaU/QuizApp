@@ -36,13 +36,16 @@ public class MainActivity extends AppCompatActivity {
 
             if (radioButton1.isChecked()) {
                 countresult = countresult + 1;
-                Toast.makeText(getApplicationContext(), getString(R.string.right_answer), Toast.LENGTH_SHORT).show();
-                //   Intent intent = new Intent(getApplicationContext(), ActivityQuestion2.class);
-                // startActivity(intent);
             }
 
         }
-        Toast.makeText(getApplicationContext(), getString(R.string.checked_radio_button), Toast.LENGTH_SHORT).show();
+        if (countresult == 0)
+        {
+            Toast.makeText(getApplicationContext(), countresult + " points until now!", Toast.LENGTH_SHORT).show();
+        }
+        else {
+            Toast.makeText(getApplicationContext(), countresult + " point until now!!", Toast.LENGTH_SHORT).show();
+        }
         Intent myIntent = new Intent(MainActivity.this, ActivityQuestion2.class);
         myIntent.putExtra("countresult", countresult);
         startActivity(myIntent);

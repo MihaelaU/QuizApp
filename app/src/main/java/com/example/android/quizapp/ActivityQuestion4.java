@@ -30,12 +30,20 @@ public class ActivityQuestion4 extends AppCompatActivity {
 
             if (radioButton4.isChecked()) {
                 points = points + 1;
-                Toast.makeText(getApplicationContext(), getString(R.string.right_answer), Toast.LENGTH_SHORT).show();
-                //   Intent intent = new Intent(getApplicationContext(), ActivityQuestion2.class);
-                // startActivity(intent);
             }
         }
-        Toast.makeText(getApplicationContext(), getString(R.string.thank_you), Toast.LENGTH_SHORT).show();
+        if (points == 0)
+        {
+            Toast.makeText(getApplicationContext(), points + " points until now!!", Toast.LENGTH_SHORT).show();
+        }
+        else if (points == 1) {
+            Toast.makeText(getApplicationContext(), points + " point until now!!", Toast.LENGTH_SHORT).show();
+        }
+        else if (points > 1)
+        {
+            Toast.makeText(getApplicationContext(), points + " points until now!!", Toast.LENGTH_SHORT).show();
+        }
+
         Intent myIntent = new Intent(ActivityQuestion4.this, FinalScreen.class);
         myIntent.putExtra("final", points);
         startActivity(myIntent);

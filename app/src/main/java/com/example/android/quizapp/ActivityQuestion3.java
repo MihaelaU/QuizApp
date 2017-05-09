@@ -11,7 +11,7 @@ import android.widget.Toast;
 import static android.icu.lang.UCharacter.toUpperCase;
 
 public class ActivityQuestion3 extends AppCompatActivity {
-    private EditText user_input;
+    public EditText user_input;
     private int result;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,14 +33,22 @@ public class ActivityQuestion3 extends AppCompatActivity {
                 if (user_input.equalsIgnoreCase("MOZAMBIQUE"))
             {
                     result++;
-                    Toast.makeText(getApplicationContext(), getString(R.string.right_answer), Toast.LENGTH_SHORT).show();
-
             }
+        }
+        if (result == 0)
+        {
+            Toast.makeText(getApplicationContext(), result + " points until now!!", Toast.LENGTH_SHORT).show();
+        }
+        else if (result == 1) {
+            Toast.makeText(getApplicationContext(), result + " point until now!!", Toast.LENGTH_SHORT).show();
+        }
+        else if (result > 1)
+        {
+            Toast.makeText(getApplicationContext(), result + " points until now!!", Toast.LENGTH_SHORT).show();
         }
         Intent myIntent = new Intent(ActivityQuestion3.this, ActivityQuestion4.class);
         myIntent.putExtra("results", result);
         startActivity(myIntent);
     }
-
 
 }
